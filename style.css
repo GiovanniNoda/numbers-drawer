@@ -26,7 +26,6 @@ body {
 header {
     width: 80%;
     margin: 5rem auto 5.75rem;
-
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
@@ -44,10 +43,10 @@ header span {
 main {
     width: 80%;
     margin: 0 auto;
-
     display: flex;
     flex-flow: column nowrap;
     gap: 2.375rem;
+    margin-bottom: 3rem;
 }
 
 #title-section {
@@ -76,7 +75,8 @@ main {
 #main-section {
     display: flex;
     flex-flow: row wrap-reverse;
-    gap: 230px;
+    width: 100%;
+    justify-content: space-between;
 }
 
 #explain-aside {
@@ -260,3 +260,93 @@ form button[type = submit]:hover {
     transition: background 0.2s;
 }
 
+@media (min-width: 1024px) and (max-width: 1439px) {
+    header {
+        width: 90%;
+        margin: 5rem auto 5.75rem;
+    }
+
+    main {
+        width: 90%;
+    }
+
+    #title-section h1 {
+        font-size: 4rem;
+    }
+
+    #drawer-aside {
+        max-width: 400px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    header {
+        justify-content: center;
+    }
+
+    main {
+        width: 80%;
+    }
+
+    #title-section {
+        margin: 0 auto;
+    }
+
+    #main-section {
+        gap: 5rem;
+        width: 100%;
+        justify-content: center;
+    }
+
+    #drawer-aside {
+        margin-top: 0;
+        width: 100%;
+    }
+
+    #explain-drawer {
+        
+    }
+
+    .form-content {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 767px) {
+    header {
+        justify-content: center;
+    }
+
+    main {
+        width: 90%;
+    }
+
+    #title-section {
+        width: 90%;
+        margin: 0 auto;
+        
+    }
+
+    #title-section h1 {
+        font-size: 2.5rem;
+    }
+
+    #main-section {
+        gap: 5rem;
+        width: 100%;
+        justify-content: center;
+    }
+
+    #drawer-aside {
+        margin-top: 0;
+        width: 90%;
+    }
+
+    #explain-drawer p {
+        font-size: 0.875rem;
+    }
+
+    .form-content {
+        justify-content: center;
+    }
+}
