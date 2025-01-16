@@ -1,0 +1,262 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --white-color: white;
+    --purple-color: #C58DE7;
+    --gray-color: #C7C9CC;
+    --background: #0d0d0d;
+    --input-background: #111012;
+    --button-background: #24222E;
+}
+
+body {
+    background: var(--background);
+    color: var(--white-color);
+    font-family: "Roboto Flex", sans-serif;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+}
+
+header {
+    width: 80%;
+    margin: 5rem auto 5.75rem;
+
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+header span {
+    text-transform: uppercase;
+    font-family: "Sora", sans-serif;
+    font-size: 1.5rem;
+    font-weight: 800;
+    line-height: 130%;
+}
+
+main {
+    width: 80%;
+    margin: 0 auto;
+
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 2.375rem;
+}
+
+#title-section {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 0.75rem;
+}
+
+#title-section span {
+    text-transform: uppercase;
+    font-family: "Roboto Mono", sans-serif;
+    color: var(--gray-color);
+    font-weight: 700;
+    line-height: 150%;
+}
+
+#title-section h1 {
+    font-family: "Sora", sans-serif;
+    text-transform: uppercase;
+    font-size: 4.5rem;
+    font-weight: 800;
+    line-height: 130%;
+    max-width: 510px;
+}
+
+#main-section {
+    display: flex;
+    flex-flow: row wrap-reverse;
+    gap: 230px;
+}
+
+#explain-aside {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 2.25rem;
+}
+
+.explain-content {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.explain {
+    display: flex;
+    flex-flow: column nowrap;
+    max-width: 358px;
+}
+
+.explain span {
+    font-size: 0.875rem;
+    color: var(--purple-color);
+    font-weight: 500;
+    line-height: 150%;
+}
+
+.explain p {
+    font-size: 0.75rem;
+    color: var(--gray-color);
+    font-weight: 500;
+    line-height: 150%;
+}
+
+#drawer-aside {
+    max-width: 482px;
+    margin-top: -238px;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 2.5rem;
+}
+
+#explain-drawer {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+#explain-drawer h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 150%;
+}
+
+#explain-drawer p {
+    font-weight: 500;
+    line-height: 150%;
+    color: var(--gray-color);
+}
+
+form {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.form-content {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 0.75rem;
+    justify-content: flex-start;
+    margin-bottom: 1.25rem
+}
+
+.input-container {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 0.5rem;
+}
+
+.input-container label {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--gray-color);
+    line-height: 150%;
+}
+
+.input-container input {
+    background: var(--input-background);
+    border: 1px solid var(--input-background);
+    color: var(--white-color);
+    font-family: "Sora", sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 150%;
+    max-width: 90px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 20px;
+  }
+
+  /* O input invisível */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  /* Estilos do cilindro */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px; /* Torna o cilindro arredondado */
+  }
+
+  /* Estilos da esfera */
+  .slider::before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 2px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.2s;
+    border-radius: 50%; /* Torna a esfera redonda */
+  }
+
+  /* Quando o toggle está ativado */
+  input:checked + .slider {
+    background-color: var(--purple-color); /* Cor do cilindro ativado */
+  }
+
+  input:checked + .slider::before {
+    transform: translateX(12px); /* Move a esfera para a direita */
+  }
+
+  #checkbox-container {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+#checkbox-container > span {
+    font-size: 0.75rem;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+form button[type = submit] {
+    all: unset;
+    cursor: pointer;
+    padding: 1rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 8px;
+    background: var(--button-background);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+form button[type = submit]:hover {
+    background: #1c1b24;
+    transition: background 0.2s;
+}
+
