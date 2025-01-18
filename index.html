@@ -43,19 +43,19 @@
                 </div>
             </aside>
 
-            <!-- <aside class="drawer-aside">
+            <aside class="drawer-aside">
                 <div id="explain-drawer">
                     <h2>Quero sortear:</h2>
                     
                     <p>Defina o intervalo e a quantidade de números, clique em "Sortear" e veja os resultados na tela. É rápido e fácil!</p>
                 </div>
 
-                <form>
+                <form id="drawer-form">
                     <div class="form-content">
                         <div class="input-container">
                             <label for="amount-numbers">números</label>
 
-                            <input type="number" id="amount-numbers" min="1" max="5" required>
+                            <input type="number" id="amount-numbers" min="1" max="6" required>
                         </div>
 
                         <div class="input-container">
@@ -67,13 +67,13 @@
                         <div class="input-container">
                             <label for="last-number">até</label>
 
-                            <input type="number" id="last-number" max="100" required>
+                            <input type="number" id="last-number" min="10" max="100" required>
                         </div>
                     </div>
 
                     <div id="checkbox-container">
                         <label class="switch">
-                            <input type="checkbox">
+                            <input type="checkbox" id="repeat-number-checkbox">
 
                             <span class="slider"></span>
                         </label>
@@ -83,7 +83,7 @@
 
                     <button type="submit">sortear <img src="assets/arrow.svg" alt=""> </button>
                 </form>
-            </aside> -->
+            </aside> 
 
             <aside class="result-aside">
                 <div class="title-result">
@@ -93,16 +93,18 @@
                 </div>
 
                 <div class="number-result">
-                    <strong>23</strong>
+                    <!-- <strong>23</strong>
 
-                    <strong>12</strong>
+                    <strong>12</strong> -->
                 </div>
 
-                <form>
+                <form id="reset-form">
                     <button type="submit">Sortear novamente <img src="assets/reload.svg" alt=""></button>
                 </form>
-            </aside>
+            </aside> 
         </section>
     </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
