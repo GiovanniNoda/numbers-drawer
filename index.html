@@ -43,7 +43,7 @@
                 </div>
             </aside>
 
-            <aside id="drawer-aside">
+            <!-- <aside class="drawer-aside">
                 <div id="explain-drawer">
                     <h2>Quero sortear:</h2>
                     
@@ -55,19 +55,19 @@
                         <div class="input-container">
                             <label for="amount-numbers">números</label>
 
-                            <input type="number" id="amount-numbers" required>
+                            <input type="number" id="amount-numbers" min="1" max="5" required>
                         </div>
 
                         <div class="input-container">
                             <label for="first-number">de</label>
 
-                            <input type="number" id="first-number" required>
+                            <input type="number" id="first-number" min="1" max="99" required>
                         </div>
 
                         <div class="input-container">
                             <label for="last-number">até</label>
 
-                            <input type="number" id="last-number" required>
+                            <input type="number" id="last-number" max="100" required>
                         </div>
                     </div>
 
@@ -82,6 +82,24 @@
                     </div>
 
                     <button type="submit">sortear <img src="assets/arrow.svg" alt=""> </button>
+                </form>
+            </aside> -->
+
+            <aside class="result-aside">
+                <div class="title-result">
+                    <h3>Resultado do sorteio</h3>
+
+                    <span>1° resultado</span>
+                </div>
+
+                <div class="number-result">
+                    <strong>23</strong>
+
+                    <strong>12</strong>
+                </div>
+
+                <form>
+                    <button type="submit">Sortear novamente <img src="assets/reload.svg" alt=""></button>
                 </form>
             </aside>
         </section>

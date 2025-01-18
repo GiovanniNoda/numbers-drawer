@@ -112,7 +112,7 @@ main {
     line-height: 150%;
 }
 
-#drawer-aside {
+.drawer-aside {
     max-width: 482px;
     margin-top: -238px;
     display: flex;
@@ -260,6 +260,87 @@ form button[type = submit]:hover {
     transition: background 0.2s;
 }
 
+.result-aside {
+    max-width: 482px;
+    width: 100%;
+    margin-top: -180px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+.title-result {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 0.25rem;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.title-result h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    line-height: 150%;
+    text-transform: uppercase;
+}
+
+.title-result span {
+    font-family: "Roboto mono", sans-serif;
+    text-transform: uppercase;
+    color: var(--gray-color);
+    font-weight: 700;
+    line-height: 150%;
+}
+
+.number-result {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.number-result strong {
+    padding: 1.125rem 1.375rem;
+    font-family: "Roboto-mono", sans-serif;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 150%;
+    text-transform: uppercase;
+    color: var(--purple-color);
+}
+
+.result-aside form {
+    width: 100%;
+}
+
+.result-aside button {
+    all: unset;
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--button-background);
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: var(--gray-color);
+    font-weight: 700;
+    line-height: 150%;
+}
+
+.result-aside button:hover {
+    background: #1c1b24;
+    transition: background 0.2s;
+}
+
 @media (min-width: 1024px) and (max-width: 1439px) {
     header {
         width: 90%;
@@ -274,8 +355,12 @@ form button[type = submit]:hover {
         font-size: 4rem;
     }
 
-    #drawer-aside {
+    .drawer-aside {
         max-width: 400px;
+    }
+
+    .result-aside {
+        width: calc(482px * 0.8);
     }
 }
 
@@ -298,13 +383,17 @@ form button[type = submit]:hover {
         justify-content: center;
     }
 
-    #drawer-aside {
+    .drawer-aside {
         margin-top: 0;
         width: 100%;
     }
 
     .form-content {
         justify-content: center;
+    }
+
+    .result-aside {
+        margin-top: 0;
     }
 }
 
@@ -333,7 +422,7 @@ form button[type = submit]:hover {
         justify-content: center;
     }
 
-    #drawer-aside {
+    .drawer-aside {
         margin-top: 0;
         width: 90%;
     }
@@ -344,5 +433,9 @@ form button[type = submit]:hover {
 
     .form-content {
         justify-content: center;
+    }
+
+    .result-aside {
+        margin-top: 0;
     }
 }
